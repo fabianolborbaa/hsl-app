@@ -101,7 +101,7 @@ export default function MenuScreen() {
                   Explore e personalize suas refeições.
                 </p>
               </div>
-              <div className="w-20 h-20 flex-shrink-0">
+              <div className="w-32 h-32 flex-shrink-0">
                 <CardapioImage />
               </div>
             </div>
