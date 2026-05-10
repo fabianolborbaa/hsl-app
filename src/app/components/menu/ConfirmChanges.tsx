@@ -44,7 +44,7 @@ export default function ConfirmChanges({ onBack, onConfirm, onCancel }: ConfirmC
 
           {/* Bottom Sheet Overlay */}
           <div className="absolute inset-0 bg-black/20 flex items-end">
-            <div className="bg-white rounded-t-3xl shadow-2xl w-full pb-4 pt-6 px-6 relative animate-slide-up">
+            <div className="menu-sheet bg-white rounded-t-3xl shadow-2xl w-full pt-6 px-6 relative animate-slide-up">
               <button onClick={onCancel} className="absolute right-4 top-4 p-1 hover:bg-gray-100 rounded-full transition">
                 <X size={20} className="menu-body" />
               </button>

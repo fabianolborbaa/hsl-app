@@ -48,7 +48,7 @@ export default function SuccessScreen({ onBack, onGoToMenu, onViewDetails }: Suc
           </div>
 
           {/* Fixed CTAs */}
-          <div className="p-4 pt-3 border-t border-gray-200 bg-white space-y-2">
+          <div className="menu-cta-footer border-t border-gray-200 space-y-2">
             <button
               onClick={onGoToMenu}
               className="w-full menu-primary-button py-3 px-5 rounded-full transition"

@@ -19,6 +19,7 @@
   --hsl-menu-weight-medium: 500;
   --hsl-menu-weight-semibold: 600;
   --hsl-menu-weight-bold: 700;
+  --hsl-menu-cta-bottom-offset: 32px;
 }
 
 .menu-header-title {
@@ -178,4 +179,13 @@
 
 .menu-secondary-button:hover {
   background: rgb(40 110 241 / 5%);
+}
+
+.menu-cta-footer {
+  background: var(--hsl-menu-color-surface);
+  padding: 12px 16px var(--hsl-menu-cta-bottom-offset);
+}
+
+.menu-sheet {
+  padding-bottom: var(--hsl-menu-cta-bottom-offset);
 }

@@ -99,7 +99,7 @@ export default function MealDetails({ onBack, onEditMeal }: MealDetailsProps) {
           </div>
 
           {/* Fixed CTA */}
-          <div className="p-4 pt-3 border-t border-gray-200 bg-white">
+          <div className="menu-cta-footer border-t border-gray-200">
             <button
               onClick={onEditMeal}
               className="w-full menu-primary-button py-3 px-5 rounded-full transition"
