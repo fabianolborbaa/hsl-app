@@ -43,9 +43,9 @@
 
 .menu-title {
   color: var(--hsl-menu-color-text-primary);
-  font-size: var(--hsl-menu-font-title);
+  font-size: var(--hsl-menu-font-title-lg);
   font-weight: var(--hsl-menu-weight-bold);
-  line-height: var(--hsl-menu-line-normal);
+  line-height: var(--hsl-menu-line-tight);
 }
 
 .menu-title-sm {
