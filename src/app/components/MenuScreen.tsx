@@ -13,12 +13,16 @@ type MenuView = 'home' | 'meal-details' | 'special-meals' | 'menu-selection' | '
 export default function MenuScreen() {
   const [selectedTab, setSelectedTab] = useState<'today' | 'tomorrow'>('tomorrow');
   const [currentView, setCurrentView] = useState<MenuView>('home');
+  const [specialMealsMode, setSpecialMealsMode] = useState<'browse' | 'edit'>('browse');
 
   if (currentView === 'meal-details') {
     return (
       <MealDetails
         onBack={() => setCurrentView('home')}
-        onEditMeal={() => setCurrentView('menu-selection')}
+        onEditMeal={() => {
+          setSpecialMealsMode('edit');
+          setCurrentView('special-meals');
+        }}
       />
     );
   }
@@ -26,8 +30,8 @@ export default function MenuScreen() {
   if (currentView === 'special-meals') {
     return (
       <SpecialMeals
-        onBack={() => setCurrentView('home')}
-        onSelectMeal={() => setCurrentView('meal-details')}
+        onBack={() => setCurrentView(specialMealsMode === 'edit' ? 'meal-details' : 'home')}
+        onSelectMeal={() => setCurrentView(specialMealsMode === 'edit' ? 'menu-selection' : 'meal-details')}
       />
     );
   }
@@ -90,7 +94,10 @@ export default function MenuScreen() {
 
             {/* Title with Illustration */}
             <div
-              onClick={() => setCurrentView('special-meals')}
+              onClick={() => {
+                setSpecialMealsMode('browse');
+                setCurrentView('special-meals');
+              }}
               className="flex items-center justify-between gap-4 py-2"
             >
               <div className="flex-1">

@@ -50,6 +50,13 @@
   line-height: var(--hsl-menu-line-normal);
 }
 
+.menu-header-avatar-text {
+  color: var(--hsl-menu-color-text-inverse);
+  font-size: var(--hsl-menu-font-body);
+  font-weight: var(--hsl-menu-weight-medium);
+  line-height: var(--hsl-menu-line-normal);
+}
+
 .menu-title {
   color: var(--hsl-menu-color-text-primary);
   font-size: var(--hsl-menu-font-title-lg);
