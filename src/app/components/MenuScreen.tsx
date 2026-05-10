@@ -68,19 +68,19 @@ export default function MenuScreen() {
         <div className="flex flex-col h-full">
 
           {/* Header */}
-          <div className="bg-[#286EF1] px-4 pb-4 h-36 flex items-end">
+          <div className="bg-[var(--hsl-menu-color-brand)] px-4 pb-4 h-36 flex items-end">
             <div className="flex items-end justify-between w-full">
               <div className="flex items-end gap-3 flex-1">
                 <button className="p-1 -ml-1 active:opacity-70 mb-0.5">
-                  <ArrowLeft size={24} className="text-white" />
+                  <ArrowLeft size={24} className="menu-header-icon" />
                 </button>
                 <div>
-                  <h1 className="text-white text-sm font-semibold">Cardápio</h1>
-                  <p className="text-white/90 text-xs">Conta Particular</p>
+                  <h1 className="menu-header-title">Cardápio</h1>
+                  <p className="menu-header-caption">Conta Particular</p>
                 </div>
               </div>
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-[#286EF1] text-xs font-bold">BT</span>
+                <span className="menu-avatar-text">BT</span>
               </div>
             </div>
           </div>
@@ -94,10 +94,10 @@ export default function MenuScreen() {
               className="flex items-center justify-between gap-4 py-2"
             >
               <div className="flex-1">
-                <h2 className="text-xl font-bold text-gray-900 mb-1.5">
+                <h2 className="menu-title mb-1.5">
                   Acesse seu cardápio
                 </h2>
-                <p className="text-xs text-gray-600">
+                <p className="menu-caption">
                   Explore e personalize suas refeições.
                 </p>
               </div>
@@ -111,13 +111,13 @@ export default function MenuScreen() {
               <Tabs.List className="flex gap-8 border-b border-gray-300">
                 <Tabs.Trigger
                   value="today"
-                  className="pb-2.5 text-sm font-medium text-gray-600 border-b-2 border-transparent data-[state=active]:border-[#286EF1] data-[state=active]:text-[#286EF1] transition -mb-[2px]"
+                  className="pb-2.5 menu-tab border-b-2 border-transparent transition -mb-[2px]"
                 >
                   Para hoje
                 </Tabs.Trigger>
                 <Tabs.Trigger
                   value="tomorrow"
-                  className="pb-2.5 text-sm font-medium text-gray-600 border-b-2 border-transparent data-[state=active]:border-[#286EF1] data-[state=active]:text-[#286EF1] transition -mb-[2px]"
+                  className="pb-2.5 menu-tab border-b-2 border-transparent transition -mb-[2px]"
                 >
                   Para amanhã
                 </Tabs.Trigger>
@@ -129,14 +129,14 @@ export default function MenuScreen() {
               <div className="bg-white border border-gray-200 rounded-xl p-4 active:bg-gray-50 transition cursor-pointer">
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex-1">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-1">
+                    <h3 className="menu-item-title mb-1">
                       Iscas de Mignon ao Molho
                     </h3>
-                    <p className="text-xs text-gray-500">
+                    <p className="menu-caption-muted">
                       Personalize novamente o almoço
                     </p>
                   </div>
-                  <ChevronRight size={18} className="text-[#286EF1] flex-shrink-0" />
+                  <ChevronRight size={18} className="menu-brand flex-shrink-0" />
                 </div>
               </div>
 
@@ -146,14 +146,14 @@ export default function MenuScreen() {
               >
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex-1">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-1">
+                    <h3 className="menu-item-title mb-1">
                       Filé de Tilápia Grelhado
                     </h3>
-                    <p className="text-xs text-gray-500">
+                    <p className="menu-caption-muted">
                       Personalize novamente o jantar
                     </p>
                   </div>
-                  <ChevronRight size={18} className="text-[#286EF1] flex-shrink-0" />
+                  <ChevronRight size={18} className="menu-brand flex-shrink-0" />
                 </div>
               </div>
             </div>
@@ -162,13 +162,13 @@ export default function MenuScreen() {
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
               <div className="flex flex-col gap-2">
                 <div className="w-5 h-5">
-                  <Info size={20} className="text-gray-500" />
+                  <Info size={20} className="menu-muted-icon" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-gray-900 mb-1">
+                  <p className="menu-item-title mb-1">
                     Altere seu cardápio até às 14h.
                   </p>
-                  <p className="text-xs text-gray-600 leading-relaxed">
+                  <p className="menu-caption">
                     Refeições podem ser personalizadas hoje e das 6 às 14h
                   </p>
                 </div>

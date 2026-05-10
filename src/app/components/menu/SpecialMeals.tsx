@@ -13,19 +13,19 @@ export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps
         <div className="flex flex-col h-full">
 
           {/* Header */}
-          <div className="bg-[#286EF1] px-4 pb-4 h-36 flex items-end">
+          <div className="bg-[var(--hsl-menu-color-brand)] px-4 pb-4 h-36 flex items-end">
             <div className="flex items-end justify-between w-full">
               <div className="flex items-end gap-3 flex-1">
                 <button onClick={onBack} className="p-1 -ml-1 active:opacity-70 mb-0.5">
-                  <ArrowLeft size={24} className="text-white" />
+                  <ArrowLeft size={24} className="menu-header-icon" />
                 </button>
                 <div>
-                  <h1 className="text-white text-sm font-semibold">Cardápio</h1>
-                  <p className="text-white/90 text-xs">Conta: Particular</p>
+                  <h1 className="menu-header-title">Cardápio</h1>
+                  <p className="menu-header-caption">Conta: Particular</p>
                 </div>
               </div>
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-[#286EF1] text-xs font-bold">NL</span>
+                <span className="menu-avatar-text">NL</span>
               </div>
             </div>
           </div>
@@ -37,10 +37,10 @@ export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps
             <div className="bg-white rounded-xl p-5 overflow-hidden">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2 leading-tight">
+                  <h2 className="menu-title-lg mb-2">
                     Refeições especialmente para você.
                   </h2>
-                  <p className="text-sm text-gray-600">
+                  <p className="menu-body">
                     Conheça o cardápio de amanhã.
                   </p>
                 </div>
@@ -55,42 +55,42 @@ export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps
               <div className="bg-white border border-gray-200 rounded-xl p-4 active:bg-gray-50 transition cursor-pointer">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Sun className="w-6 h-6 text-gray-700" />
+                    <Sun className="w-6 h-6 menu-icon" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-base font-semibold text-gray-900 mb-0.5">
+                    <h3 className="menu-section-title mb-0.5">
                       Almoço de amanhã
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="menu-muted">
                       À partir das 12h
                     </p>
                   </div>
-                  <ChevronRight size={20} className="text-[#286EF1] flex-shrink-0" />
+                  <ChevronRight size={20} className="menu-brand flex-shrink-0" />
                 </div>
               </div>
 
               <div onClick={onSelectMeal} className="bg-white border border-gray-200 rounded-xl p-4 active:bg-gray-50 transition cursor-pointer">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Moon className="w-6 h-6 text-gray-700" />
+                    <Moon className="w-6 h-6 menu-icon" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-base font-semibold text-gray-900 mb-0.5">
+                    <h3 className="menu-section-title mb-0.5">
                       Jantar de amanhã
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="menu-muted">
                       À partir das 18h
                     </p>
                   </div>
-                  <ChevronRight size={20} className="text-[#286EF1] flex-shrink-0" />
+                  <ChevronRight size={20} className="menu-brand flex-shrink-0" />
                 </div>
               </div>
             </div>
 
             {/* Info Text */}
             <div className="px-1">
-              <p className="text-sm text-gray-700">
-                <span className="font-semibold">Lembre-se:</span> as alterações nas refeições só podem ser feitas das 6h às 14h, com 01 dia de antecedência.
+              <p className="menu-body">
+                <span className="menu-body-strong">Lembre-se:</span> as alterações nas refeições só podem ser feitas das 6h às 14h, com 01 dia de antecedência.
               </p>
             </div>
 
@@ -98,13 +98,13 @@ export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
               <div className="flex flex-col gap-2">
                 <div className="w-5 h-5">
-                  <Headphones className="w-5 h-5 text-gray-500" />
+                  <Headphones className="w-5 h-5 menu-muted-icon" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-gray-900 mb-1">
+                  <p className="menu-item-title mb-1">
                     Precisando de ajuda?
                   </p>
-                  <p className="text-xs text-gray-700 leading-relaxed">
+                  <p className="menu-caption">
                     Entre em contato com o Concierge ou o Serviço de Copa do hospital e tire suas dúvidas.
                   </p>
                 </div>
