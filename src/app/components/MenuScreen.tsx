@@ -88,23 +88,21 @@ export default function MenuScreen() {
           {/* Content */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
 
-            {/* Card with Illustration */}
+            {/* Title with Illustration */}
             <div
               onClick={() => setCurrentView('special-meals')}
-              className="bg-white border border-gray-200 rounded-xl p-5 overflow-hidden cursor-pointer active:bg-gray-50 transition"
+              className="flex items-center justify-between gap-4 py-2"
             >
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex-1">
-                  <h2 className="text-xl font-bold text-gray-900 mb-1.5">
-                    Acesse seu cardápio
-                  </h2>
-                  <p className="text-xs text-gray-600">
-                    Explore e personalize suas refeições.
-                  </p>
-                </div>
-                <div className="w-20 h-20 flex-shrink-0">
-                  <CardapioImage />
-                </div>
+              <div className="flex-1">
+                <h2 className="text-xl font-bold text-gray-900 mb-1.5">
+                  Acesse seu cardápio
+                </h2>
+                <p className="text-xs text-gray-600">
+                  Explore e personalize suas refeições.
+                </p>
+              </div>
+              <div className="w-20 h-20 flex-shrink-0">
+                <CardapioImage />
               </div>
             </div>
 
