@@ -9,7 +9,7 @@ interface ConfirmChangesProps {
 export default function ConfirmChanges({ onBack, onConfirm, onCancel }: ConfirmChangesProps) {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-[375px] bg-white rounded-3xl shadow-xl overflow-hidden min-h-[812px] relative">
+      <div className="menu-mobile-frame bg-white rounded-3xl shadow-xl overflow-hidden relative">
         <div className="flex flex-col h-full">
 
           {/* Header */}

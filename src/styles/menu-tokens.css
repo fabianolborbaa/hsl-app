@@ -20,6 +20,14 @@
   --hsl-menu-weight-semibold: 600;
   --hsl-menu-weight-bold: 700;
   --hsl-menu-cta-bottom-offset: 32px;
+  --hsl-menu-frame-width: 375px;
+  --hsl-menu-frame-height: 812px;
+}
+
+.menu-mobile-frame {
+  width: var(--hsl-menu-frame-width);
+  height: var(--hsl-menu-frame-height);
+  flex-shrink: 0;
 }
 
 .menu-header-title {
