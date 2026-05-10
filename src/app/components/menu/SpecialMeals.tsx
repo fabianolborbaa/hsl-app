@@ -52,41 +52,41 @@ export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps
             <div className="space-y-3">
               <div className="menu-action-card">
                 <div className="menu-action-card-row">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="menu-action-icon">
                     <div className="relative w-6 h-6">
                       <BellRing className="absolute left-1 top-0 w-3 h-3 menu-icon" />
                       <ConciergeBell className="absolute left-0 bottom-0 w-6 h-6 menu-icon" />
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="menu-section-title mb-0.5">
+                    <h3 className="menu-action-title">
                       Almoço de amanhã
                     </h3>
-                    <p className="menu-muted">
+                    <p className="menu-action-subtitle">
                       À partir das 12h
                     </p>
                   </div>
-                  <ChevronRight size={20} className="menu-brand flex-shrink-0" />
+                  <ChevronRight size={18} className="menu-brand flex-shrink-0" />
                 </div>
               </div>
 
               <div onClick={onSelectMeal} className="menu-action-card">
                 <div className="menu-action-card-row">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="menu-action-icon">
                     <div className="relative w-6 h-6">
                       <Moon className="absolute left-0 top-0 w-3.5 h-3.5 menu-icon" />
                       <ConciergeBell className="absolute left-0 bottom-0 w-6 h-6 menu-icon" />
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="menu-section-title mb-0.5">
+                    <h3 className="menu-action-title">
                       Jantar de amanhã
                     </h3>
-                    <p className="menu-muted">
+                    <p className="menu-action-subtitle">
                       À partir das 18h
                     </p>
                   </div>
-                  <ChevronRight size={20} className="menu-brand flex-shrink-0" />
+                  <ChevronRight size={18} className="menu-brand flex-shrink-0" />
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps
             </div>
 
             {/* Help Card */}
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+            <div className="menu-info-card">
               <div className="flex flex-col gap-2">
                 <div className="w-5 h-5">
                   <Headphones className="w-5 h-5 menu-muted-icon" />

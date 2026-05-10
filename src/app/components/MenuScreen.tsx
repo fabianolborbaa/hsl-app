@@ -136,10 +136,10 @@ export default function MenuScreen() {
               <div className="menu-action-card">
                 <div className="menu-action-card-row">
                   <div className="flex-1">
-                    <h3 className="menu-item-title mb-1">
+                    <h3 className="menu-action-title">
                       Iscas de Mignon ao Molho
                     </h3>
-                    <p className="menu-caption-muted">
+                    <p className="menu-action-subtitle">
                       Personalize novamente o almoço
                     </p>
                   </div>
@@ -153,10 +153,10 @@ export default function MenuScreen() {
               >
                 <div className="menu-action-card-row">
                   <div className="flex-1">
-                    <h3 className="menu-item-title mb-1">
+                    <h3 className="menu-action-title">
                       Filé de Tilápia Grelhado
                     </h3>
-                    <p className="menu-caption-muted">
+                    <p className="menu-action-subtitle">
                       Personalize novamente o jantar
                     </p>
                   </div>
@@ -166,7 +166,7 @@ export default function MenuScreen() {
             </div>
 
             {/* Info Alert */}
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+            <div className="menu-info-card">
               <div className="flex flex-col gap-2">
                 <div className="w-5 h-5">
                   <Info size={20} className="menu-muted-icon" />

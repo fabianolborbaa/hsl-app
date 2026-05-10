@@ -84,7 +84,7 @@ export default function MealDetails({ onBack, onEditMeal }: MealDetailsProps) {
             </div>
 
             {/* Info Card */}
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+            <div className="menu-info-card">
               <div className="flex flex-col gap-2">
                 <div className="w-5 h-5">
                   <Info className="w-5 h-5 menu-muted-icon" />
