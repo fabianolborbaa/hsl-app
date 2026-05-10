@@ -133,8 +133,8 @@ export default function MenuScreen() {
 
             {/* Menu Items */}
             <div className="space-y-3">
-              <div className="bg-white border border-gray-200 rounded-xl p-4 active:bg-gray-50 transition cursor-pointer">
-                <div className="flex items-center justify-between gap-3">
+              <div className="menu-action-card">
+                <div className="menu-action-card-row">
                   <div className="flex-1">
                     <h3 className="menu-item-title mb-1">
                       Iscas de Mignon ao Molho
@@ -149,9 +149,9 @@ export default function MenuScreen() {
 
               <div
                 onClick={() => setCurrentView('meal-details')}
-                className="bg-white border border-gray-200 rounded-xl p-4 active:bg-gray-50 transition cursor-pointer"
+                className="menu-action-card"
               >
-                <div className="flex items-center justify-between gap-3">
+                <div className="menu-action-card-row">
                   <div className="flex-1">
                     <h3 className="menu-item-title mb-1">
                       Filé de Tilápia Grelhado

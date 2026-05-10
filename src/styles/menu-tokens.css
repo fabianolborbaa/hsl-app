@@ -197,3 +197,24 @@
 .menu-sheet {
   padding-bottom: var(--hsl-menu-cta-bottom-offset);
 }
+
+.menu-action-card {
+  min-height: 88px;
+  background: var(--hsl-menu-color-surface);
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  padding: 16px;
+  transition: background 150ms ease;
+}
+
+.menu-action-card:active {
+  background: rgb(249 250 251);
+}
+
+.menu-action-card-row {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  height: 100%;
+}

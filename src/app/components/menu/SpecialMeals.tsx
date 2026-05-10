@@ -50,8 +50,8 @@ export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps
 
             {/* Meal Options */}
             <div className="space-y-3">
-              <div className="bg-white border border-gray-200 rounded-xl p-4 active:bg-gray-50 transition cursor-pointer">
-                <div className="flex items-center gap-4">
+              <div className="menu-action-card">
+                <div className="menu-action-card-row">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <div className="relative w-6 h-6">
                       <BellRing className="absolute left-1 top-0 w-3 h-3 menu-icon" />
@@ -70,8 +70,8 @@ export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps
                 </div>
               </div>
 
-              <div onClick={onSelectMeal} className="bg-white border border-gray-200 rounded-xl p-4 active:bg-gray-50 transition cursor-pointer">
-                <div className="flex items-center gap-4">
+              <div onClick={onSelectMeal} className="menu-action-card">
+                <div className="menu-action-card-row">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <div className="relative w-6 h-6">
                       <Moon className="absolute left-0 top-0 w-3.5 h-3.5 menu-icon" />
