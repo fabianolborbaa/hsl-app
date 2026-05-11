@@ -40,6 +40,7 @@ export default defineConfig({
         components: path.resolve(__dirname, 'components.html'),
         menu: path.resolve(__dirname, 'menu.html'),
         senha: path.resolve(__dirname, 'senha.html'),
+        exames: path.resolve(__dirname, 'exames.html'),
       },
     },
   },
