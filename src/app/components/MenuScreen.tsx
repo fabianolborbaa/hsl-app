@@ -47,10 +47,15 @@ export default function MenuScreen() {
 
   if (currentView === 'confirm-changes') {
     return (
-      <ConfirmChanges
-        onBack={() => setCurrentView('menu-selection')}
-        onConfirm={() => setCurrentView('success')}
-        onCancel={() => setCurrentView('menu-selection')}
+      <MenuSelection
+        onBack={() => setCurrentView('meal-details')}
+        onConfirm={() => setCurrentView('confirm-changes')}
+        overlay={
+          <ConfirmChanges
+            onConfirm={() => setCurrentView('success')}
+            onCancel={() => setCurrentView('menu-selection')}
+          />
+        }
       />
     );
   }

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { ArrowLeft, Coffee, Salad } from 'lucide-react';
 import { useState } from 'react';
 import * as RadioGroup from '@radix-ui/react-radio-group';
@@ -5,15 +6,16 @@ import * as RadioGroup from '@radix-ui/react-radio-group';
 interface MenuSelectionProps {
   onBack: () => void;
   onConfirm: () => void;
+  overlay?: ReactNode;
 }
 
-export default function MenuSelection({ onBack, onConfirm }: MenuSelectionProps) {
+export default function MenuSelection({ onBack, onConfirm, overlay }: MenuSelectionProps) {
   const [selectedSoup, setSelectedSoup] = useState('creme-palmito');
   const [selectedDessert, setSelectedDessert] = useState('salada-grega');
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div className="menu-mobile-frame bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div className="menu-mobile-frame bg-white rounded-3xl shadow-xl overflow-hidden relative">
         <div className="flex flex-col h-full">
 
           {/* Header */}
@@ -141,6 +143,7 @@ export default function MenuSelection({ onBack, onConfirm }: MenuSelectionProps)
             </button>
           </div>
         </div>
+        {overlay}
       </div>
     </div>
   );
