@@ -37,6 +37,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
+        components: path.resolve(__dirname, 'components.html'),
         menu: path.resolve(__dirname, 'menu.html'),
         senha: path.resolve(__dirname, 'senha.html'),
       },

@@ -32,18 +32,24 @@ import ExamCards from './components/ExamCards';
 import MenuScreen from './components/MenuScreen';
 import AppointmentSummary from './components/AppointmentSummary';
 
+type AppPage = 'components' | 'exam-cards' | 'menu' | 'appointment';
+
+interface AppProps {
+  standalonePage?: AppPage;
+}
+
 const Eyebrow = ({ children }: { children: string }) => (
   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">{children}</p>
 );
 
-export default function App() {
+export default function App({ standalonePage }: AppProps) {
   const [activeTab, setActiveTab] = useState('tab-2');
   const [selectedItem, setSelectedItem] = useState('Label 03');
   const [selectedDate, setSelectedDate] = useState(8);
   const [hoveredDate, setHoveredDate] = useState<number | null>(null);
   const [switchEnabled, setSwitchEnabled] = useState(true);
   const [progress, setProgress] = useState(66);
-  const [currentPage, setCurrentPage] = useState<'components' | 'exam-cards' | 'menu' | 'appointment'>('components');
+  const [currentPage, setCurrentPage] = useState<AppPage>(standalonePage ?? 'components');
 
   return (
     <div className="min-h-screen bg-white p-12">
@@ -51,7 +57,7 @@ export default function App() {
 
       <div className="max-w-[1600px] mx-auto">
         {/* Page Navigation */}
-        <div className="mb-8 flex gap-4">
+        {!standalonePage && <div className="mb-8 flex gap-4">
           <button
             onClick={() => setCurrentPage('components')}
             className={`px-5 py-2 rounded-full font-medium transition text-sm ${
@@ -92,7 +98,7 @@ export default function App() {
           >
             Appointment Summary
           </button>
-        </div>
+        </div>}
 
         {/* Page Content */}
         {currentPage === 'exam-cards' && <ExamCards />}
