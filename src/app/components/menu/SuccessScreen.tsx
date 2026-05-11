@@ -27,7 +27,7 @@ export default function SuccessScreen({ onBack, onGoToMenu, onViewDetails, trans
                 </div>
               </div>
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="menu-avatar-text">BT</span>
+                <span className="menu-avatar-text">NL</span>
               </div>
             </div>
           </div>
