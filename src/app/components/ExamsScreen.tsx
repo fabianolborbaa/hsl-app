@@ -1,5 +1,12 @@
-import { ArrowLeft, Beaker, CalendarPlus, ChevronLeft, ChevronRight, ClipboardPlus, FileText, Image as ImageIcon } from 'lucide-react';
+import BiotechOutlinedIcon from '@mui/icons-material/BiotechOutlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
+import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
+import examesHeroImage from '../../assets/exames-hero.png';
+import examesImagemImage from '../../assets/exames-imagem.png';
+import examesLaudoImage from '../../assets/exames-laudo.png';
 
 type ExamsView = 'list' | 'detail';
 type TransitionDirection = 'forward' | 'back';
@@ -7,7 +14,7 @@ type TransitionDirection = 'forward' | 'back';
 const exams = [
   {
     id: 'transaminases',
-    icon: Beaker,
+    icon: BiotechOutlinedIcon,
     title: 'Transaminases (ALT e AST) ou TGP e TGO.',
     date: 'Realizado em 10/05',
     status: 'Resultado previsto para 28/05',
@@ -15,7 +22,7 @@ const exams = [
   },
   {
     id: 'ultrasound',
-    icon: CalendarPlus,
+    icon: CalendarMonthOutlinedIcon,
     title: 'Ultrassonografia de Mamas (Bilateral)',
     date: 'Realizado em 10/05',
     status: 'Resultado liberado',
@@ -23,7 +30,7 @@ const exams = [
   },
   {
     id: 'cholesterol',
-    icon: Beaker,
+    icon: BiotechOutlinedIcon,
     title: 'Colesterol Total (CT), Triglicerídeos (TG) e Colestero...',
     date: 'Realizado em 10/05',
     status: 'Resultado liberado',
@@ -34,13 +41,13 @@ const exams = [
 const resultDocuments = [
   {
     id: 'report',
-    icon: FileText,
+    icon: DescriptionOutlinedIcon,
     title: 'Laudo Médico',
     imageSide: 'document',
   },
   {
     id: 'image',
-    icon: ImageIcon,
+    icon: ImageOutlinedIcon,
     title: 'Imagem',
     imageSide: 'exam',
   },
@@ -69,16 +76,7 @@ function ExamsHeader() {
 
 function ExamsIllustrationPlaceholder() {
   return (
-    <div className="exam-illustration-placeholder" aria-hidden="true">
-      <div className="exam-illustration-cloud exam-illustration-cloud-left" />
-      <div className="exam-illustration-cloud exam-illustration-cloud-right" />
-      <div className="exam-illustration-person">
-        <div className="exam-illustration-head" />
-        <div className="exam-illustration-body" />
-        <div className="exam-illustration-arm" />
-        <div className="exam-illustration-leg" />
-      </div>
-    </div>
+    <img className="exam-hero-image" src={examesHeroImage} alt="" aria-hidden="true" />
   );
 }
 
@@ -124,7 +122,7 @@ function ExamList({ onSelectExam, transitionDirection }: { onSelectExam: () => v
               type="button"
             >
               <div className="menu-action-card-row items-start">
-                <Icon size={20} className="menu-icon flex-shrink-0 mt-0.5" />
+                <Icon className="exam-material-icon menu-icon flex-shrink-0 mt-0.5" />
                 <div className="flex-1 min-w-0 text-left">
                   <h3 className="menu-action-title">{exam.title}</h3>
                   <p className="menu-action-subtitle">{exam.date}</p>
@@ -141,21 +139,12 @@ function ExamList({ onSelectExam, transitionDirection }: { onSelectExam: () => v
 }
 
 function ResultPreview({ type }: { type: 'document' | 'exam' }) {
+  const image = type === 'document' ? examesLaudoImage : examesImagemImage;
+
   return (
     <div className="exam-result-preview">
       <div className="exam-result-brand">SÍRIO-LIBANÊS</div>
-      {type === 'document' ? (
-        <div className="exam-result-doc-art">
-          <ClipboardPlus size={34} />
-          <FileText size={42} />
-        </div>
-      ) : (
-        <div className="exam-result-image-art">
-          <div className="exam-result-person-a" />
-          <div className="exam-result-panel" />
-          <div className="exam-result-person-b" />
-        </div>
-      )}
+      <img className="exam-result-image" src={image} alt="" aria-hidden="true" />
     </div>
   );
 }
@@ -194,7 +183,7 @@ function ExamDetail({ onBack, transitionDirection }: { onBack: () => void; trans
               <article key={document.id} className="exam-result-card">
                 <ResultPreview type={document.imageSide} />
                 <div className="exam-result-action">
-                  <Icon size={18} className="menu-icon" />
+                  <Icon className="exam-result-row-icon menu-icon" />
                   <span className="menu-body-strong flex-1">{document.title}</span>
                   <button className="exam-result-link" type="button">Acessar resultado</button>
                 </div>

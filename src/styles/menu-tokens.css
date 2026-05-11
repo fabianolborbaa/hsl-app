@@ -324,84 +324,11 @@
   margin-bottom: 18px;
 }
 
-.exam-illustration-placeholder {
-  background: #eaf3ff;
-  border-radius: 999px;
+.exam-hero-image {
+  display: block;
   height: 128px;
-  overflow: hidden;
-  position: relative;
+  object-fit: contain;
   width: 128px;
-}
-
-.exam-illustration-cloud {
-  background: #cfe3ff;
-  border-radius: 999px;
-  position: absolute;
-}
-
-.exam-illustration-cloud-left {
-  height: 42px;
-  left: 18px;
-  top: 58px;
-  width: 54px;
-}
-
-.exam-illustration-cloud-right {
-  height: 56px;
-  right: 14px;
-  top: 42px;
-  width: 64px;
-}
-
-.exam-illustration-person {
-  height: 78px;
-  left: 44px;
-  position: absolute;
-  top: 30px;
-  width: 48px;
-}
-
-.exam-illustration-head {
-  background: #8b3d2e;
-  border-radius: 999px;
-  height: 14px;
-  left: 23px;
-  position: absolute;
-  top: 0;
-  width: 14px;
-}
-
-.exam-illustration-body {
-  background: #ff9bd5;
-  border: 1px solid #286ef1;
-  border-radius: 999px 999px 14px 14px;
-  height: 42px;
-  left: 10px;
-  position: absolute;
-  top: 18px;
-  width: 28px;
-}
-
-.exam-illustration-arm {
-  background: #8b3d2e;
-  border-radius: 999px;
-  height: 7px;
-  left: 25px;
-  position: absolute;
-  top: 22px;
-  transform: rotate(-35deg);
-  width: 30px;
-}
-
-.exam-illustration-leg {
-  background: #286ef1;
-  border-radius: 999px;
-  bottom: 0;
-  height: 8px;
-  left: 4px;
-  position: absolute;
-  transform: rotate(-55deg);
-  width: 34px;
 }
 
 .exam-date-tabs {
@@ -434,6 +361,11 @@
 .exam-card {
   height: 124px;
   padding: 16px;
+}
+
+.exam-material-icon {
+  height: 20px;
+  width: 20px;
 }
 
 .exam-status {
@@ -500,63 +432,29 @@
 }
 
 .exam-result-brand {
+  align-items: center;
   color: #0175cf;
+  display: flex;
   font-size: 0.75rem;
   font-weight: var(--hsl-menu-weight-bold);
+  gap: 6px;
   line-height: var(--hsl-menu-line-normal);
 }
 
-.exam-result-doc-art,
-.exam-result-image-art {
-  align-items: center;
-  display: flex;
-  height: 68px;
-  justify-content: center;
-  position: relative;
-  width: 92px;
+.exam-result-brand::before {
+  background: #0175cf;
+  border-radius: 999px;
+  content: '';
+  display: block;
+  height: 22px;
+  width: 22px;
 }
 
-.exam-result-doc-art svg:first-child {
-  color: #68bde7;
-  left: 12px;
-  position: absolute;
-  top: 8px;
-}
-
-.exam-result-doc-art svg:last-child {
-  color: #ff8ea1;
-  position: absolute;
-  right: 8px;
-  top: 16px;
-}
-
-.exam-result-person-a,
-.exam-result-person-b {
-  border-radius: 999px 999px 12px 12px;
-  height: 42px;
-  position: absolute;
-  top: 14px;
-  width: 24px;
-}
-
-.exam-result-person-a {
-  background: #f05d6f;
-  left: 14px;
-}
-
-.exam-result-person-b {
-  background: #9ed8f2;
-  right: 10px;
-}
-
-.exam-result-panel {
-  background: #1f2937;
-  border-radius: 4px;
-  height: 50px;
-  left: 34px;
-  position: absolute;
-  top: 18px;
-  width: 36px;
+.exam-result-image {
+  display: block;
+  height: 80px;
+  object-fit: contain;
+  width: 80px;
 }
 
 .exam-result-action {
@@ -571,6 +469,11 @@
   font-size: var(--hsl-menu-font-body);
   font-weight: var(--hsl-menu-weight-semibold);
   line-height: var(--hsl-menu-line-normal);
+}
+
+.exam-result-row-icon {
+  height: 18px;
+  width: 18px;
 }
 
 .menu-content-transition {
