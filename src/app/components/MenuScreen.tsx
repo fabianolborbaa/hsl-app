@@ -91,8 +91,8 @@ export default function MenuScreen() {
 
   return (
     <div key={pageKey} className={`menu-page-transition menu-page-${transitionDirection}`}>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-        <div className="menu-mobile-frame bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div className="menu-canvas">
+        <div className="menu-mobile-frame bg-white overflow-hidden">
           {/* Mobile Container */}
           <div className="flex flex-col h-full">
 

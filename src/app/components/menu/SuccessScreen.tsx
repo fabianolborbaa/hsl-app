@@ -9,8 +9,8 @@ interface SuccessScreenProps {
 
 export default function SuccessScreen({ onBack, onGoToMenu, onViewDetails }: SuccessScreenProps) {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div className="menu-mobile-frame bg-white rounded-3xl shadow-xl overflow-hidden">
+    <div className="menu-canvas">
+      <div className="menu-mobile-frame bg-white overflow-hidden">
         <div className="flex flex-col h-full">
 
           {/* Header */}

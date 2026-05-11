@@ -30,6 +30,13 @@
   flex-shrink: 0;
 }
 
+.menu-canvas {
+  width: var(--hsl-menu-frame-width);
+  height: var(--hsl-menu-frame-height);
+  background: var(--hsl-menu-color-surface);
+  overflow: hidden;
+}
+
 .menu-header-title {
   color: var(--hsl-menu-color-text-inverse);
   font-size: var(--hsl-menu-font-body);
