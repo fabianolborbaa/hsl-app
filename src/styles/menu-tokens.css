@@ -250,3 +250,45 @@
   border-radius: 0.75rem;
   padding: 16px;
 }
+
+.menu-page-transition {
+  animation-duration: 220ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.menu-page-forward {
+  animation-name: menu-slide-in-forward;
+}
+
+.menu-page-back {
+  animation-name: menu-slide-in-back;
+}
+
+@keyframes menu-slide-in-forward {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes menu-slide-in-back {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-page-transition {
+    animation: none;
+  }
+}
