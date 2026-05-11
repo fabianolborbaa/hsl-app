@@ -13,6 +13,9 @@ import {
   ChevronDown,
   Grid3x3,
   X,
+  User,
+  HelpCircle,
+  LogOut,
   ChevronLeft,
   ChevronRight,
   Loader2,
@@ -547,6 +550,44 @@ export default function App({ standalonePage }: AppProps) {
                     </Accordion.Content>
                   </Accordion.Item>
                 </Accordion.Root>
+              </div>
+            </div>
+
+            {/* User Menu */}
+            <div>
+              <Eyebrow>User Menu</Eyebrow>
+              <div className="space-y-3">
+                <div className="flex items-center gap-4 px-3">
+                  <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-semibold text-sm">
+                    DM
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm font-medium text-[#286EF1] leading-tight">Olá, nome da pessoa usuária</p>
+                      <ChevronDown size={16} className="text-[#286EF1] rotate-180" />
+                    </div>
+                    <p className="text-xs text-gray-500 leading-tight mt-1">Tipo de conta</p>
+                  </div>
+                </div>
+
+                <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                  <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer flex items-center gap-3 border-b border-gray-100">
+                    <User size={18} className="text-gray-700" />
+                    <span className="text-sm text-gray-800">Meus dados</span>
+                  </div>
+                  <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer flex items-center gap-3 border-b border-gray-100">
+                    <Settings size={18} className="text-gray-700" />
+                    <span className="text-sm text-gray-800">Configurações</span>
+                  </div>
+                  <div className="px-4 py-3 bg-[#EBF2FE] cursor-pointer flex items-center gap-3 border-b border-gray-100">
+                    <HelpCircle size={18} className="text-[#286EF1]" />
+                    <span className="text-sm text-[#286EF1] font-medium">Ajuda e suporte</span>
+                  </div>
+                  <div className="px-4 py-3 hover:bg-gray-50 cursor-pointer flex items-center gap-3">
+                    <LogOut size={18} className="text-gray-700" />
+                    <span className="text-sm text-gray-800">Sair da minha conta</span>
+                  </div>
+                </div>
               </div>
             </div>
 
