@@ -5,9 +5,10 @@ interface SuccessScreenProps {
   onBack: () => void;
   onGoToMenu: () => void;
   onViewDetails: () => void;
+  transitionDirection?: 'forward' | 'back';
 }
 
-export default function SuccessScreen({ onBack, onGoToMenu, onViewDetails }: SuccessScreenProps) {
+export default function SuccessScreen({ onBack, onGoToMenu, onViewDetails, transitionDirection = 'forward' }: SuccessScreenProps) {
   return (
     <div className="menu-canvas">
       <div className="menu-mobile-frame bg-white overflow-hidden">
@@ -31,6 +32,7 @@ export default function SuccessScreen({ onBack, onGoToMenu, onViewDetails }: Suc
             </div>
           </div>
 
+          <div className={`menu-content-transition menu-content-${transitionDirection} flex flex-col flex-1 min-h-0`}>
           {/* Content */}
           <div className="flex-1 flex flex-col overflow-y-auto">
             <div className="flex-1 flex flex-col items-center justify-center p-6">
@@ -61,6 +63,7 @@ export default function SuccessScreen({ onBack, onGoToMenu, onViewDetails }: Suc
             >
               Acessar detalhes da refeição
             </button>
+          </div>
           </div>
         </div>
       </div>

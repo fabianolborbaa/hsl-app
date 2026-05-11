@@ -22,76 +22,68 @@ export default function MenuScreen() {
     setCurrentView(view);
   };
 
-  const pageKey = currentView === 'confirm-changes' ? 'menu-selection' : currentView;
-
   if (currentView === 'meal-details') {
     return (
-      <div key={pageKey} className={`menu-page-transition menu-page-${transitionDirection}`}>
-        <MealDetails
-          onBack={() => goTo('home', 'back')}
-          onEditMeal={() => {
-            setSpecialMealsMode('edit');
-            goTo('special-meals', 'forward');
-          }}
-        />
-      </div>
+      <MealDetails
+        transitionDirection={transitionDirection}
+        onBack={() => goTo('home', 'back')}
+        onEditMeal={() => {
+          setSpecialMealsMode('edit');
+          goTo('special-meals', 'forward');
+        }}
+      />
     );
   }
 
   if (currentView === 'special-meals') {
     return (
-      <div key={pageKey} className={`menu-page-transition menu-page-${transitionDirection}`}>
-        <SpecialMeals
-          onBack={() => goTo(specialMealsMode === 'edit' ? 'meal-details' : 'home', 'back')}
-          onSelectMeal={() => goTo(specialMealsMode === 'edit' ? 'menu-selection' : 'meal-details', 'forward')}
-        />
-      </div>
+      <SpecialMeals
+        transitionDirection={transitionDirection}
+        onBack={() => goTo(specialMealsMode === 'edit' ? 'meal-details' : 'home', 'back')}
+        onSelectMeal={() => goTo(specialMealsMode === 'edit' ? 'menu-selection' : 'meal-details', 'forward')}
+      />
     );
   }
 
   if (currentView === 'menu-selection') {
     return (
-      <div key={pageKey} className={`menu-page-transition menu-page-${transitionDirection}`}>
-        <MenuSelection
-          onBack={() => goTo('meal-details', 'back')}
-          onConfirm={() => goTo('confirm-changes', 'forward')}
-        />
-      </div>
+      <MenuSelection
+        transitionDirection={transitionDirection}
+        onBack={() => goTo('meal-details', 'back')}
+        onConfirm={() => goTo('confirm-changes', 'forward')}
+      />
     );
   }
 
   if (currentView === 'confirm-changes') {
     return (
-      <div key={pageKey} className={`menu-page-transition menu-page-${transitionDirection}`}>
-        <MenuSelection
-          onBack={() => goTo('meal-details', 'back')}
-          onConfirm={() => goTo('confirm-changes', 'forward')}
-          overlay={
-            <ConfirmChanges
-              onConfirm={() => goTo('success', 'forward')}
-              onCancel={() => goTo('menu-selection', 'back')}
-            />
-          }
-        />
-      </div>
+      <MenuSelection
+        transitionDirection={transitionDirection}
+        onBack={() => goTo('meal-details', 'back')}
+        onConfirm={() => goTo('confirm-changes', 'forward')}
+        overlay={
+          <ConfirmChanges
+            onConfirm={() => goTo('success', 'forward')}
+            onCancel={() => goTo('menu-selection', 'back')}
+          />
+        }
+      />
     );
   }
 
   if (currentView === 'success') {
     return (
-      <div key={pageKey} className={`menu-page-transition menu-page-${transitionDirection}`}>
-        <SuccessScreen
-          onBack={() => goTo('home', 'back')}
-          onGoToMenu={() => goTo('home', 'back')}
-          onViewDetails={() => goTo('meal-details', 'forward')}
-        />
-      </div>
+      <SuccessScreen
+        transitionDirection={transitionDirection}
+        onBack={() => goTo('home', 'back')}
+        onGoToMenu={() => goTo('home', 'back')}
+        onViewDetails={() => goTo('meal-details', 'forward')}
+      />
     );
   }
 
   return (
-    <div key={pageKey} className={`menu-page-transition menu-page-${transitionDirection}`}>
-      <div className="menu-canvas">
+    <div className="menu-canvas">
         <div className="menu-mobile-frame bg-white overflow-hidden">
           {/* Mobile Container */}
           <div className="flex flex-col h-full">
@@ -115,7 +107,7 @@ export default function MenuScreen() {
             </div>
 
             {/* Content */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className={`menu-content-transition menu-content-${transitionDirection} flex-1 overflow-y-auto p-4 space-y-4`}>
 
               {/* Title with Illustration */}
               <div
@@ -210,7 +202,6 @@ export default function MenuScreen() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }

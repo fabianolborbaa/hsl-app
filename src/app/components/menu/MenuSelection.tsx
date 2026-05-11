@@ -7,9 +7,10 @@ interface MenuSelectionProps {
   onBack: () => void;
   onConfirm: () => void;
   overlay?: ReactNode;
+  transitionDirection?: 'forward' | 'back';
 }
 
-export default function MenuSelection({ onBack, onConfirm, overlay }: MenuSelectionProps) {
+export default function MenuSelection({ onBack, onConfirm, overlay, transitionDirection = 'forward' }: MenuSelectionProps) {
   const [selectedSoup, setSelectedSoup] = useState('creme-palmito');
   const [selectedDessert, setSelectedDessert] = useState('salada-grega');
 
@@ -36,6 +37,7 @@ export default function MenuSelection({ onBack, onConfirm, overlay }: MenuSelect
             </div>
           </div>
 
+          <div className={`menu-content-transition menu-content-${transitionDirection} flex flex-col flex-1 min-h-0`}>
           {/* Content */}
           <div className="flex-1 p-4 space-y-4 overflow-y-auto">
 
@@ -141,6 +143,7 @@ export default function MenuSelection({ onBack, onConfirm, overlay }: MenuSelect
             >
               Salvar jantar de amanhã
             </button>
+          </div>
           </div>
         </div>
         {overlay}

@@ -4,9 +4,10 @@ import CardapioImage from '../CardapioImage';
 interface SpecialMealsProps {
   onBack: () => void;
   onSelectMeal: () => void;
+  transitionDirection?: 'forward' | 'back';
 }
 
-export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps) {
+export default function SpecialMeals({ onBack, onSelectMeal, transitionDirection = 'forward' }: SpecialMealsProps) {
   return (
     <div className="menu-canvas">
       <div className="menu-mobile-frame bg-white overflow-hidden">
@@ -31,7 +32,7 @@ export default function SpecialMeals({ onBack, onSelectMeal }: SpecialMealsProps
           </div>
 
           {/* Content */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          <div className={`menu-content-transition menu-content-${transitionDirection} flex-1 overflow-y-auto p-4 space-y-4`}>
 
             {/* Title with Illustration */}
             <div className="flex items-start justify-between gap-4 py-2">

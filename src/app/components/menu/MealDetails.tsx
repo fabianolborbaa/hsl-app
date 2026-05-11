@@ -3,9 +3,10 @@ import { ArrowLeft, Coffee, Salad, UtensilsCrossed, IceCream, Plus, Info } from 
 interface MealDetailsProps {
   onBack: () => void;
   onEditMeal: () => void;
+  transitionDirection?: 'forward' | 'back';
 }
 
-export default function MealDetails({ onBack, onEditMeal }: MealDetailsProps) {
+export default function MealDetails({ onBack, onEditMeal, transitionDirection = 'forward' }: MealDetailsProps) {
   return (
     <div className="menu-canvas">
       <div className="menu-mobile-frame bg-white overflow-hidden">
@@ -29,6 +30,7 @@ export default function MealDetails({ onBack, onEditMeal }: MealDetailsProps) {
             </div>
           </div>
 
+          <div className={`menu-content-transition menu-content-${transitionDirection} flex flex-col flex-1 min-h-0`}>
           {/* Content */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
 
@@ -106,6 +108,7 @@ export default function MealDetails({ onBack, onEditMeal }: MealDetailsProps) {
             >
               Editar refeição
             </button>
+          </div>
           </div>
         </div>
       </div>
