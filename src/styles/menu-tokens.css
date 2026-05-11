@@ -258,6 +258,72 @@
   padding: 16px;
 }
 
+.senha-ticket-card {
+  align-items: center;
+  background: var(--hsl-menu-color-surface);
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px 22px;
+}
+
+.senha-ticket-label {
+  color: var(--hsl-menu-color-text-primary);
+  font-size: var(--hsl-menu-font-body);
+  font-weight: var(--hsl-menu-weight-semibold);
+  line-height: var(--hsl-menu-line-normal);
+}
+
+.senha-ticket-code {
+  color: #0d47a1;
+  font-size: 2.5rem;
+  font-weight: var(--hsl-menu-weight-bold);
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.senha-status-badge {
+  border: 1px solid #ffcc80;
+  border-radius: 0.25rem;
+  color: #ef8f22;
+  font-size: var(--hsl-menu-font-caption);
+  line-height: var(--hsl-menu-line-normal);
+  margin-top: 6px;
+  padding: 0 4px;
+}
+
+.senha-wait-link {
+  align-items: center;
+  color: var(--hsl-menu-color-brand);
+  display: flex;
+  font-size: var(--hsl-menu-font-body);
+  font-weight: var(--hsl-menu-weight-semibold);
+  gap: 6px;
+  line-height: var(--hsl-menu-line-normal);
+  margin-top: 12px;
+}
+
+.senha-help-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px;
+}
+
+.senha-info-section {
+  border-top: 1px solid rgb(229 231 235);
+  padding-top: 18px;
+}
+
+.senha-section-title {
+  color: var(--hsl-menu-color-text-primary);
+  font-size: 1.125rem;
+  font-weight: var(--hsl-menu-weight-bold);
+  line-height: var(--hsl-menu-line-tight);
+  margin-bottom: 18px;
+}
+
 .menu-content-transition {
   animation-duration: 220ms;
   animation-fill-mode: both;

@@ -38,6 +38,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         menu: path.resolve(__dirname, 'menu.html'),
+        senha: path.resolve(__dirname, 'senha.html'),
       },
     },
   },
