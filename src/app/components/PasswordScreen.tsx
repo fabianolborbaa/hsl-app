@@ -17,7 +17,8 @@ export default function PasswordScreen() {
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-4 space-y-5">
+          <div className="flex flex-col flex-1 min-h-0">
+            <div className="flex-1 overflow-y-auto p-4 space-y-5">
             <section className="senha-ticket-card">
               <p className="senha-ticket-label">Senha de atendimento</p>
               <p className="senha-ticket-code">PR306</p>
@@ -53,6 +54,13 @@ export default function PasswordScreen() {
                 </div>
               </div>
             </section>
+            </div>
+
+            <div className="menu-cta-footer border-t border-gray-200">
+              <button className="w-full menu-primary-button py-3 px-5 rounded-full transition" type="button">
+                Ativar senha
+              </button>
+            </div>
           </div>
         </div>
       </div>
