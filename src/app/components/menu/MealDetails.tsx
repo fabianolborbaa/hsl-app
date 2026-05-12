@@ -13,7 +13,7 @@ export default function MealDetails({ onBack, onEditMeal, transitionDirection = 
         <div className="flex flex-col h-full">
 
           {/* Header */}
-          <div className="bg-[var(--hsl-menu-color-brand)] px-4 pb-4 h-36 flex items-end">
+          <div className="bg-[#1749a6] px-4 pb-4 h-[120px] flex items-end">
             <div className="flex items-end justify-between w-full">
               <div className="flex items-end gap-3 flex-1">
                 <button onClick={onBack} className="p-1 -ml-1 active:opacity-70 mb-0.5">
