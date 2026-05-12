@@ -5,7 +5,7 @@ export default function PasswordScreen() {
     <div className="menu-canvas">
       <div className="menu-mobile-frame bg-white overflow-hidden">
         <div className="flex flex-col h-full">
-          <div className="bg-[var(--hsl-menu-color-brand)] px-4 pb-4 h-36 flex items-end">
+          <div className="bg-[#1749a6] px-4 pb-4 h-[120px] flex items-end">
             <div className="flex items-end justify-between w-full">
               <div>
                 <h1 className="menu-header-title">Resumo da ficha de atendimento</h1>
