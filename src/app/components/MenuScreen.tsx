@@ -1,5 +1,5 @@
 import { ArrowLeft, ChevronRight, Info } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import * as Tabs from '@radix-ui/react-tabs';
 import CardapioImage from './CardapioImage';
 import MealDetails from './menu/MealDetails';
@@ -21,6 +21,37 @@ export default function MenuScreen() {
     setTransitionDirection(direction);
     setCurrentView(view);
   };
+
+  // Auto-play demo loop when ?demo=1 in URL
+  const demoRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    const isDemo = new URLSearchParams(window.location.search).get('demo') === '1';
+    if (!isDemo) return;
+
+    type Step = { view: MenuView; dir: TransitionDirection; mode?: 'browse' | 'edit'; hold: number };
+    const steps: Step[] = [
+      { view: 'home',            dir: 'forward', hold: 2800 },
+      { view: 'meal-details',    dir: 'forward', hold: 2800 },
+      { view: 'special-meals',   dir: 'forward', mode: 'edit', hold: 2200 },
+      { view: 'menu-selection',  dir: 'forward', hold: 3000 },
+      { view: 'confirm-changes', dir: 'forward', hold: 2200 },
+      { view: 'success',         dir: 'forward', hold: 3000 },
+    ];
+
+    let idx = 0;
+
+    function tick() {
+      const next = steps[(idx + 1) % steps.length];
+      idx = (idx + 1) % steps.length;
+      if (next.mode) setSpecialMealsMode(next.mode);
+      setTransitionDirection(next.dir);
+      setCurrentView(next.view);
+      demoRef.current = setTimeout(tick, next.hold);
+    }
+
+    demoRef.current = setTimeout(tick, steps[0].hold);
+    return () => { if (demoRef.current) clearTimeout(demoRef.current); };
+  }, []);
 
   if (currentView === 'meal-details') {
     return (
