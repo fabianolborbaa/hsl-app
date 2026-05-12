@@ -26,13 +26,13 @@
 
 .menu-mobile-frame {
   width: var(--hsl-menu-frame-width);
-  height: var(--hsl-menu-frame-height);
+  height: min(var(--hsl-menu-frame-height), 100svh);
   flex-shrink: 0;
 }
 
 .menu-canvas {
   width: var(--hsl-menu-frame-width);
-  height: var(--hsl-menu-frame-height);
+  height: min(var(--hsl-menu-frame-height), 100svh);
   background: var(--hsl-menu-color-surface);
   overflow: hidden;
 }
