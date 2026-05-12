@@ -51,7 +51,7 @@ export default function App({ standalonePage }: AppProps) {
   const [currentPage, setCurrentPage] = useState<AppPage>(standalonePage ?? 'components');
 
   return (
-    <div className="min-h-screen bg-white p-12">
+    <div className="min-h-screen bg-[#F5F3EE] p-6 lg:p-12">
       <Toaster position="top-right" />
 
       <div className="max-w-[1600px] mx-auto">
@@ -106,7 +106,7 @@ export default function App({ standalonePage }: AppProps) {
         {currentPage === 'components' && (
         <>
         {/* Main Grid */}
-        <div className="grid grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-16">
 
           {/* LEFT COLUMN */}
           <div className="space-y-12">
