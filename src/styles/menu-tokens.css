@@ -271,7 +271,7 @@
 
 .hsl-modern .bg-\[var\(--hsl-menu-color-brand\)\],
 .hsl-modern .home-header {
-  background: #286ef1;
+  background: #1749a6;
   box-shadow: 0 10px 24px rgb(37 103 220 / 12%);
 }
 
@@ -391,7 +391,7 @@
 
 .home-header {
   align-items: flex-end;
-  background: #286ef1;
+  background: #1749a6;
   display: flex;
   height: 120px;
   justify-content: space-between;
@@ -589,7 +589,7 @@
 }
 
 .senha-modern-header {
-  background: #286ef1;
+  background: #1749a6;
   box-shadow: 0 10px 24px rgb(37 103 220 / 12%);
 }
 
