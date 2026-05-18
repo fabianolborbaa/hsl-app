@@ -1,0 +1,1 @@
+import{c as o,j as t}from"./index-DEQVo3oC.js";import{A as e}from"./App-BxsTZFh4.js";import"./MenuScreen-CL_yWSVN.js";o.createRoot(document.getElementById("root")).render(t.jsx(e,{standalonePage:"components"}));
