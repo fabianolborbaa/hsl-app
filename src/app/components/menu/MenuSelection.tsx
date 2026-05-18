@@ -15,8 +15,8 @@ export default function MenuSelection({ onBack, onConfirm, overlay, transitionDi
   const [selectedDessert, setSelectedDessert] = useState('salada-grega');
 
   return (
-    <div className="menu-canvas">
-      <div className="menu-mobile-frame bg-white overflow-hidden relative">
+    <div className="menu-canvas hsl-modern">
+      <div className="menu-mobile-frame overflow-hidden relative">
         <div className="flex flex-col h-full">
 
           {/* Header */}

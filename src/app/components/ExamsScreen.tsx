@@ -1,8 +1,10 @@
+import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import BiotechOutlinedIcon from '@mui/icons-material/BiotechOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
+import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
-import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import examesHeroImage from '../../assets/exames-hero.png';
 import examesImagemImage from '../../assets/exames-imagem.png';
@@ -59,7 +61,7 @@ function ExamsHeader() {
       <div className="flex items-end justify-between w-full">
         <div className="flex items-end gap-3 flex-1">
           <button className="p-1 -ml-1 active:opacity-70 mb-0.5" type="button">
-            <ArrowLeft size={24} className="menu-header-icon" />
+            <ArrowBackOutlinedIcon className="exam-header-icon menu-header-icon" />
           </button>
           <div>
             <h1 className="menu-header-title">Exames</h1>
@@ -103,15 +105,15 @@ function ExamList({ onSelectExam, transitionDirection }: { onSelectExam: () => v
       </section>
 
       <div className="exam-date-tabs" aria-label="Datas de exames">
-        <button className="exam-date-tab exam-date-tab-muted" type="button">2022</button>
+        <button className="exam-date-tab exam-date-tab-year" type="button">2022</button>
         <button className="exam-date-tab exam-date-tab-active" type="button">MAI</button>
         <button className="exam-date-tab" type="button">ABR</button>
         <button className="exam-date-tab" type="button">FEV</button>
-        <button className="exam-date-tab exam-date-tab-muted" type="button">2022</button>
+        <button className="exam-date-tab exam-date-tab-year" type="button">2022</button>
         <button className="exam-date-tab" type="button">DEZ</button>
       </div>
 
-      <section className="space-y-3">
+      <section className="exam-list-cards space-y-3">
         {exams.map((exam) => {
           const Icon = exam.icon;
           return (
@@ -128,7 +130,7 @@ function ExamList({ onSelectExam, transitionDirection }: { onSelectExam: () => v
                   <p className="menu-action-subtitle">{exam.date}</p>
                   <ExamStatus tone={exam.statusTone}>{exam.status}</ExamStatus>
                 </div>
-                <ChevronRight size={22} className="menu-brand flex-shrink-0 self-center" />
+                <ChevronRightOutlinedIcon className="exam-chevron-icon menu-brand flex-shrink-0 self-center" />
               </div>
             </button>
           );
@@ -153,9 +155,9 @@ function ExamDetail({ onBack, transitionDirection }: { onBack: () => void; trans
   return (
     <div className={`menu-content-transition menu-content-${transitionDirection} flex-1 overflow-y-auto p-4 space-y-4`}>
       <div className="exam-navigation-pill">
-        <ChevronLeft size={20} className="menu-muted-icon" />
+        <ChevronLeftOutlinedIcon className="exam-navigation-icon menu-muted-icon" />
         <span>Navegue entre os exames</span>
-        <ChevronRight size={20} className="menu-brand" />
+        <ChevronRightOutlinedIcon className="exam-navigation-icon menu-brand" />
       </div>
 
       <section className="space-y-3">
@@ -213,8 +215,8 @@ export default function ExamsScreen() {
   };
 
   return (
-    <div className="menu-canvas">
-      <div className="menu-mobile-frame bg-white overflow-hidden">
+    <div className="menu-canvas hsl-modern">
+      <div className="menu-mobile-frame overflow-hidden">
         <div className="flex flex-col h-full">
           <ExamsHeader />
           {currentView === 'list' ? (

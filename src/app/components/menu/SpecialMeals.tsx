@@ -9,8 +9,8 @@ interface SpecialMealsProps {
 
 export default function SpecialMeals({ onBack, onSelectMeal, transitionDirection = 'forward' }: SpecialMealsProps) {
   return (
-    <div className="menu-canvas">
-      <div className="menu-mobile-frame bg-white overflow-hidden">
+    <div className="menu-canvas hsl-modern">
+      <div className="menu-mobile-frame overflow-hidden">
         <div className="flex flex-col h-full">
 
           {/* Header */}

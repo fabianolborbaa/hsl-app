@@ -4,8 +4,8 @@ import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlin
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import EventAvailableOutlinedIcon from '@mui/icons-material/EventAvailableOutlined';
 import LocalHospitalOutlinedIcon from '@mui/icons-material/LocalHospitalOutlined';
+import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
-import { Loader2 } from 'lucide-react';
 import homeHealthcareTeamImage from '../../assets/home-healthcare-team.png';
 
 const shortcuts = [
@@ -65,8 +65,8 @@ function HomeHeader() {
 
 export default function HomeScreen() {
   return (
-    <div className="menu-canvas">
-      <div className="menu-mobile-frame bg-white overflow-hidden">
+    <div className="menu-canvas hsl-modern">
+      <div className="menu-mobile-frame overflow-hidden">
         <div className="flex flex-col h-full">
           <HomeHeader />
 
@@ -82,7 +82,7 @@ export default function HomeScreen() {
               </div>
 
               <div className="home-loading-card" role="status">
-                <Loader2 size={18} className="menu-brand animate-spin" />
+                <AutorenewOutlinedIcon className="home-loading-icon menu-brand" />
                 <span>Verificando se há consultas para hoje</span>
               </div>
 
