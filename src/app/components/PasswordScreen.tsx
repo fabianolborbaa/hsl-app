@@ -7,7 +7,7 @@ export default function PasswordScreen() {
     <div className="menu-canvas senha-modern">
       <div className="menu-mobile-frame overflow-hidden">
         <div className="flex flex-col h-full">
-          <div className="senha-modern-header px-4 pb-4 h-36 flex items-end">
+          <div className="senha-modern-header px-4 pb-4 h-[120px] flex items-end">
             <div className="flex items-end justify-between w-full">
               <div>
                 <h1 className="menu-header-title">Resumo da ficha de atendimento</h1>
